@@ -1,0 +1,163 @@
+/*
+    AUTHR: TacoAnon
+    DESCR: Personal startpage
+    BRWSR: Mozilla Firefox (Tested in WaterFox 35)
+    NOTES: - Optional content ends with a comment block. just add a "/*" to the top of the rule block to disable it.
+*/
+
+html, body {
+    background: #000 url("../media/background.jpg") repeat fixed center;
+    background-size: auto auto;
+    font-family: "Segoe UI";
+    font-size: 8pt;
+    color: #555;/*fgcolor*/
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+ul, li { list-style-type: none; margin: 0; padding: 0; }
+a, a:link, a:visited { color: #555;/*fgcolor*/ text-decoration: none; }
+a:hover, a:active { color: #555;/*fgcolor*/ }
+b { color: #0F0F0F;}
+
+.bkgImg {
+    background-image: url("../media/background.jpg");
+    background-size: auto auto;
+    background-position: center;
+    -webkit-filter: blur(6px);
+    filter: blur(6px);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 0;
+} /*FF35+ adds in filters. Comment this out if you are running an older FF.*/
+
+.con {
+    position: relative;
+    top: 20%;
+    width: 500px;
+    margin: 0 auto;
+    margin-bottom: 4px;
+    background-color: rgba(255,255,255,.9);/*bgcolor*/
+    border: 1px solid #C3C3C3;/*brcolor*/
+    padding: 4px;
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2),
+                0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#bseCon {
+    transition: opacity 0.4s cubic-bezier(0,0,1,1) 0s !important;
+}
+
+#mnuCon {
+    text-align: center;
+    padding-top: 4px;
+}
+
+input[type="text"] { font-family: "Segoe UI"; font-size: 8pt; }
+
+#qry {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #C3C3C3;/*brcolor*/
+    color: #555;/*fgcolor*/
+    font-size: 8pt;
+    opacity: 1;
+    padding: 8px 0px;
+    text-align: center;
+    transition: .2s ease;
+    width: 100%;
+}
+
+.hlpTog {
+    position: absolute;
+    top: -1px;
+    right: 3px;
+    width: 20px;
+    height: 20px;
+    text-align: right;
+    opacity: .2;
+    transition: .2s ease;
+    cursor: pointer;
+}
+.hlpTog:hover { opacity: .75; }
+
+#mnu {
+    list-style-type: none;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.mnuItm {
+    width: 80px;
+    min-width: 80px;
+    max-width: 80px;
+    padding: 8px 0;
+    text-align: center;
+    flex-grow: 1;
+    border-right: 1px solid #C3C3C3;/*brcolor*/
+    transition: .2s ease;
+    z-index: 1;
+}
+.mnuItm:last-child { border-right: none; }
+
+.mnuItm label {
+    padding: 4px 8px;
+    transition: .2s ease;
+    color: #555;/*fgcolor*/
+    border-bottom: 2px solid transparent;
+}
+.mnuItm:hover label { border-color: #0080FF !important; color: #000 !important; }
+
+.subMnuCon {
+    padding-top: 9px;
+    position: absolute;
+    margin-left: -65px;
+    opacity: 0;
+    visibility: hidden;
+    top: 71px;
+    transition: .2s ease;
+}
+.mnuItm:hover .subMnuCon { opacity: 1; visibility: visible; }
+
+.subMnu {
+    width: 200px !important;
+    text-align: left;
+}
+
+.subMnuItm {
+    color: #555;/*fgcolor*/
+    padding: 8px 0px;
+    border-bottom: 1px solid #C3C3C3;/*brcolor*/
+    text-align: left;
+    transition: .2s ease;
+}
+.subMnuItm:last-child { border: none; }
+.subMnuItm:hover { background-color: rgba(0,0,0,0.2); color: #000; }
+
+.subMnuItm img {
+    height: 16px;
+    padding: 0 0 0 4px;
+    position: relative;
+    top: 3px;
+    visibility: hidden;
+    width: 16px;
+}
+
+#hlpCon {
+    opacity: 0;
+    overflow: hidden;
+    max-height: 0px;
+    transition: all 0.4s cubic-bezier(0,0,1,1) 0s !important;
+    margin-top: -14px;
+}
+
+.pInd {
+    margin-top: 0px;
+    margin-left: 10px;
+}
