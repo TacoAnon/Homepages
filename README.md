@@ -1,4 +1,4 @@
-FirefoxFiles
+Homepage-v3
 ============
 
-Files for my Firefox Theme and related projects.
+My personal homepage. Still technically a WIP
