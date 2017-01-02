@@ -65,7 +65,7 @@ var linkMenu = [
   ["/w/ Anime/Wallpapers",     "",""],
   ["/wg/ Wallpaper/General",   "",""],
   
-  [svgCode,                    "red",                                         "-HEAD-"], // FuelRats
+  [svgCode,                    "red",                                         "-HEAD-"], // Code Stuff
   ["GitHub",                   "",""],
   ["Gist",                     "",""],
   ["JSFiddle",                 "",""],
