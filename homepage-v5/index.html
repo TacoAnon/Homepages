@@ -1,0 +1,40 @@
+<html lang="en-US">
+<head>
+    <title>New Tab</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,300">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Product+Sans">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script async type="text/javascript" src="js/script.js"></script>
+    <meta name=viewport content="width=device-width, initial-scale=.75">
+    <noscript>Javascript is requred for this page to display properly, silly.</noscript>
+</head>
+<body onload="javascript:init();" id="body" style="opacity: 0;">
+<div class="background"></div>
+<div class="center-flex offset-25">
+<div class="container" id="mainContainer">
+    <div class="container container-search" id="searchContainer">
+        <input tabindex="1" type="text" id="searchBar"
+               onfocus="javascript:addClass('mainContainer','input-active');"
+               onblur="javascript:removeClass('mainContainer','input-active')"
+               onkeydown="javascript:handleQuery(event,this.value);">
+    </div>
+    <div class="container container-menu" id="menuContainer">
+        <ul class="menu-category" id="categoryMenu"></ul>
+    </div>
+</div>
+</div>
+<div id="notesWidget" class="widget">
+    <div id="notesContainer" class="container-notes">
+        <div class="notes-icon">
+            <svg style="width:24px;height:24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
+        </div>
+        <textarea id="notesInput" tabindex="2"
+                  onkeydown="javascript:handleNoteInput(event)"
+                  onfocus="javascript:handleNotes(event,true)"
+                  onblur="javascript:handleNotes(event,false)"></textarea>
+    </div>
+</div>
+<div id="dateContainer" class="widget align-right"></div>
+</body>
+</html>
