@@ -154,29 +154,20 @@ function buildHelp() {
 
 function buildMenu() {
   var newMenu = "";
-  var accent = "";
 
-  if(linkMenu[0][2] === "-HEAD-") {
-
-    if (linkMenu[0][1] !== "") accent = linkMenu[0][1].toLowerCase();
-    else accent = "white";
-
-    newMenu += "<li class=\"button-container expanding-down\"><div class=\"button accent-" + accent + "\"><label class=\"button-content\">" + linkMenu[0][0] + "</label><div class=\"button-expanded-content\"><ul class=\"menu-link container\">";
-  } else {
+  if(linkMenu[0][2] === "-HEAD-")
+    newMenu += "<li class=\"button-container expanding-down\"><div class=\"button accent-" + (linkMenu[0][1] !== "" ? linkMenu[0][1].toLowerCase() : "white") + "\"><label class=\"button-content\">" + linkMenu[0][0] + "</label><div class=\"button-expanded-content\"><ul class=\"menu-link container\">";
+  else {
     alert("linkMenu is invalid. Ensure to start the list with a -HEAD- entry.");
+    return;
   }
-  for (var i = 1; i < linkMenu.length; i++) {
-    if (linkMenu[i][2] === "-HEAD-") {
 
-      if (linkMenu[i][1] !== "") accent = linkMenu[i][1].toLowerCase();
-      else accent = "white";
-
-      newMenu += "</ul></div></div></li><li class=\"button-container expanding-down\"><div class=\"button accent-" + accent + "\"><label class=\"button-content\">" + linkMenu[i][0] + "</label><div class=\"button-expanded-content\"><ul class=\"menu-link container\">";
-    } else {
+  for (var i = 1; i < linkMenu.length; i++)
+    if (linkMenu[i][2] === "-HEAD-")
+      newMenu += "</ul></div></div></li><li class=\"button-container expanding-down\"><div class=\"button accent-" + (linkMenu[i][1] !== "" ? linkMenu[i][1].toLowerCase() : "white") + "\"><label class=\"button-content\">" + linkMenu[i][0] + "</label><div class=\"button-expanded-content\"><ul class=\"menu-link container\">";
+    else
       newMenu += "<li class='menu-link-item'><a href=\"" + linkMenu[i][1] + "\" target=\"_self\"><label>" + linkMenu[i][0] + "</label></a></li>";
-    }
-  }
-  newMenu +="</ul></div></div></li>";
+  newMenu += "</ul></div></div></li>";
 
   rootMenuUL.innerHTML = newMenu;
 }
@@ -229,9 +220,7 @@ function handleQuery(event, query) {
 
 function handleNoteInput(event) {
   var key = event.keyCode || event.which;
-  if (key === 27) {
-    notesTextarea.blur();
-  }
+  if (key === 27) notesTextarea.blur();
 }
 
 var noteText = null;
@@ -253,9 +242,11 @@ function handleNotes(event, focus){
 
 var ignoredKeys = [9,13,16,17,18,19,20,27,33,34,35,36,37,38,39,40,45,46,91,92,93,112,113,114,115,116,117,118,119,120,121,122,123,144,145];
 function handleKeydown(event) {
-  if(notesInput === document.activeElement) return;
-  if(searchInput === document.activeElement) return;
-  if (ignoredKeys.includes(event.keyCode)) return;
+  if (notesInput === document.activeElement || 
+     searchInput === document.activeElement || 
+     ignoredKeys.includes(event.keyCode))
+    return;
+
   searchInput.focus();
 }
 
@@ -296,5 +287,5 @@ function CanSetCookies() {
     return can;
 }
 function DelCookie(name) {
-    document.cookie = fr.client.CookieBase + name + '=0; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    document.cookie = CookiePrefix + name + '=0; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
