@@ -1,0 +1,83 @@
+/*=================*/
+/*== Containers ==*/
+/*===============*/
+
+#searchHelp {
+  max-height: 0;
+  margin-top: 8px;
+  overflow: hidden;
+  transition: 0.2s cubic-bezier(0.4, 0.0, 0.2, 1) 0.2s; 
+
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  
+}
+.input-active #searchHelp {
+  max-height: 999px;
+  transition: 0.2s cubic-bezier(0.4, 0.0, 0.2, 1) 0.2s; 
+  -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+/*=================*/
+/*== HELP LIST ==*/
+/*===============*/
+
+.help-list {
+  font-size: 1.4em;
+}
+
+.help-list li {
+  background-color: #1F2326;
+  padding: 20px 0;
+  margin-bottom: 10px;
+    color: #a7b3b9;
+    box-shadow: 0  2px  2px  0   rgba(0, 0, 0, 0.14),
+              0  3px  1px -2px rgba(0, 0, 0, 0.2),
+              0  1px  5px  0   rgba(0, 0, 0, 0.12);
+
+  overflow: hidden;
+
+  height: auto;
+
+  opacity: 0;
+  margin-left: 100px;
+
+  transition: 0.2s cubic-bezier(0.4, 0.0, 0.2, 1) 0.2s;
+  transition-delay: 0.0s;
+}
+
+.input-active li {
+  transition: 0.2s cubic-bezier(0.4, 0.0, 0.2, 1) 0.2s;
+  opacity: 1;
+  margin-left: 0;
+}
+
+.help-list span {
+  margin-right: 10px;
+  padding: 20px;
+  width: 90px;
+  background-color: #1a1d1f;
+}
+
+.help-list li:nth-child(1){
+  transition-delay: 0.2s;
+}
+.help-list li:nth-child(2){
+  transition-delay: 0.3s;
+}
+.help-list li:nth-child(3){
+  transition-delay: 0.4s;
+}
+.help-list li:nth-child(4){
+  transition-delay: 0.5s;
+}
+.help-list li:nth-child(5){
+  transition-delay: 0.6s;
+}
+.help-list li:nth-child(6){
+  transition-delay: 0.7s;
+}
+.help-list li:nth-child(7){
+  transition-delay: 0.8s;
+}

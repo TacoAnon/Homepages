@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,300">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Product+Sans">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/trystan.css">
     <script async type="text/javascript" src="js/script.js"></script>
     <meta name=viewport content="width=device-width, initial-scale=.75">
     <noscript>Javascript is requred for this page to display properly, silly.</noscript>
@@ -18,6 +19,9 @@
                onfocus="javascript:addClass('mainContainer','input-active');"
                onblur="javascript:removeClass('mainContainer','input-active')"
                onkeydown="javascript:handleQuery(event,this.value);">
+    </div>
+    <div class="container container-help" id="searchHelp">
+	    <ul class="help-list" id="searchHelpMenu"></ul>
     </div>
     <div class="container container-menu" id="menuContainer">
         <ul class="menu-category" id="categoryMenu"></ul>
