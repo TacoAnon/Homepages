@@ -1,4 +1,6 @@
-#Homepage-v5
+#Homepage-v5-trystanr-fork
+
+Hey this is a fork of the original homepage with a few little twists of my own to increase user experience and add some meme animations (As well as removing some things).
 
 This version of my main homepage has had some major overhauls in not only look but in function as well. Favicons are long gone, and things are much more material-esque.
 
