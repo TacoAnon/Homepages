@@ -1,6 +1,6 @@
-#Homepage-v5
+#Homepage-v5-trystanr
 
-This version of my main homepage has had some major overhauls in not only look but in function as well. Favicons are long gone, and things are much more material-esque.
+This version of homepage-v5 has been modified by [@trystanr](https://github.com/Trystanr) to include a help for search bar commands. 
 
 ##IMPORTANT
 Check out the script file in the JS directory. It's where you can setup your links, and change a few extra settings. Further explaination is provided in there.
